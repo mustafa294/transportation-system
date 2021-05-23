@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transportation_system/common_widgets/location_description.dart';
 import 'package:transportation_system/common_widgets/schedule_description.dart';
 import 'package:transportation_system/utils/constants.dart';
 
@@ -65,85 +66,7 @@ class SchedulePage extends StatelessWidget {
           ),
         ],
       ),
-      child: Row(
-        children: [
-          Column(
-            children: [
-              Icon(
-                Icons.location_on,
-                color: Colors.blue,
-                size: 40,
-              ),
-              Container(
-                height: 50,
-                child: VerticalDivider(
-                  thickness: 1,
-                ),
-              ),
-              Icon(
-                Icons.location_on,
-                color: AppColor.busColor,
-                size: 40,
-              ),
-            ],
-          ),
-          SizedBox(
-            width: 15,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "From",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 15,
-                    ),
-                  ),
-                  Text(
-                    "Lorem MRT Station",
-                    style: TextStyle(
-                      color: AppColor.textDarkColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
-                  ),
-                ],
-              ),
-              Container(
-                width: 200,
-                child: Divider(
-                  thickness: 1,
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "To",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 15,
-                    ),
-                  ),
-                  Text(
-                    "Dolor MRT Station",
-                    style: TextStyle(
-                      color: AppColor.textDarkColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          )
-        ],
-      ),
+      child: LocationDescription(),
     );
   }
 
