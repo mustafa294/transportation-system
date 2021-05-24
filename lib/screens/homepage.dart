@@ -156,6 +156,28 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  BottomNavigationBar buildBottomNavigationBar() {
+    return BottomNavigationBar(
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+      currentIndex: 0,
+      items: [
+        BottomNavigationBarItem(
+          title: Text(""),
+          icon: Icon(Icons.home),
+        ),
+        BottomNavigationBarItem(
+          title: Text(""),
+          icon: Icon(Icons.person),
+        ),
+        BottomNavigationBarItem(
+          title: Text(""),
+          icon: Icon(Icons.location_on),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -163,6 +185,7 @@ class HomePage extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
+        bottomNavigationBar: buildBottomNavigationBar(),
         backgroundColor: AppColor.backgroundColor,
         body: Stack(
           overflow: Overflow.visible,
